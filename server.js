@@ -41,8 +41,6 @@ function getPool(schema) {
 // ===================== AUTH MIDDLEWARE =====================
 // ตรวจ API Key ง่ายๆ กัน public access
 function authCheck(req, res, next) {
-  //ปิดฟังกชั่นชั่วคราวเพื่อทดสอบ
-  return next();
   
   const key = req.headers['x-api-key'] || req.query.key;
   if (key !== process.env.API_KEY) {
