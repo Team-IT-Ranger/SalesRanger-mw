@@ -169,7 +169,7 @@ async function getBootstrap(lineUserId, targetSchema) {
     ),
     pool.query(
       `SELECT CustNo, CustName, GroupCode, ShopTypeCode,
-              Phone, Addr1, Latitude, Longitude
+              Phone, Addr1, Latitude, Longtitude
        FROM customer ORDER BY CustName LIMIT 500`
     ),
     pool.query(
